@@ -14,7 +14,7 @@ export const Form = () => {
             </div>
             <div>
                 <select className='form-select'>
-                    <option selected disabled>Type</option>
+                    <option defaultValue disabled>Type</option>
                     <option>Income</option>
                     <option>Expense</option>
                 </select>
