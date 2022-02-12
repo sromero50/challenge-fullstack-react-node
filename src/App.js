@@ -6,15 +6,18 @@ import {
 } from "react-router-dom";
 import Home from "./views/home";
 import Operations from "./views/operations";
-
+import AuthProvider from "./Context/authProvider";
 
 function App() {
+  
   return (
     <Router>
-      <Routes>
+      <AuthProvider>
+        <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/operations" element={<Operations />} />
+        <Route path="/operations" element={<Operations  />} />
       </Routes>
+      </AuthProvider>
     </Router>
   );
 }

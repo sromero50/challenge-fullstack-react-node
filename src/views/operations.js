@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form } from '../components/form';
 import OperationList from '../components/operationList';
-const Operations = () => {
+const Operations = (props) => {
     return <div>
         <div className='text-center mt-5'>
             <h1 >Form</h1>
@@ -9,7 +9,7 @@ const Operations = () => {
         </div>
         <div  className='text-center mt-5'>
             <h1>Operations</h1>
-            <OperationList />
+            <OperationList transactions={props.transactions}  />
         </div>
     </div>;
 };

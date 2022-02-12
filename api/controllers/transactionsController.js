@@ -41,7 +41,7 @@ module.exports = {
     editTransaction: async function (req, res, next) {
       try {
   
-        const edit = await Transaction.update({concept: req.body.concept, amount: req.body.amount}, {where: {id: req.params.id}})
+        const edit = await Transaction.update(req.body, {where: {id: req.params.id}})
         res.json({"msg": "Transaction edited"})
         
       } catch (error) {

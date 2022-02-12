@@ -9,6 +9,7 @@ var debug = require('debug')('api:server');
 var http = require('http');
 var db = require('../config/db')
 
+
 // Connect db
 db.authenticate()
     .then( () => console.log('Database connected'))
