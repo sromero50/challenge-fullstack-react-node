@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import AuthContext from "../Context/authContext";
 const OperationList = () => {
   const auth = useContext(AuthContext)
-  const [type, setType] = useState("income")
+  const [type, setType] = useState("Income")
   const [form, setForm] = useState({});
 
   const handleChange = event => {
@@ -15,8 +15,8 @@ const OperationList = () => {
   return <div className='container col-md-6'>
     <div>
       <select onChange={(e) => setType(e.target.value)} className='form-select'>
-        <option value="income">Income</option>
-        <option value="expense">Expense</option>
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
       </select>
     </div>
     <div className='table-responsive-md'>

@@ -37,8 +37,8 @@ export const Form = () => {
             <div>
                 <select name="type" onChange={handleChange} className='form-select' required>
                     <option hidden>Type</option>
-                    <option value="income">Income</option>
-                    <option value="expense">Expense</option>
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
                 </select>
             </div>
             <button type='submit' className='btn btn-danger col-md-12' >Submit</button>

@@ -1,10 +1,37 @@
-import React, { useState, useContext }  from "react";
+import React, { useState, useEffect, useContext } from "react";
 import AuthContext from "../Context/authContext";
 const Home = () => {
     const auth = useContext(AuthContext)
-    
+
+    const [total, setTotal] = useState()
+    const [lastTransactions, setLastTransactions] = useState([])
+
+    useEffect(() => {
+        let last10 = auth.transactions.slice(Math.max(auth.transactions.length - 10, 0))
+        setLastTransactions(last10.reverse())
+
+        let expense = 0
+        let income = 0
+
+
+        auth.transactions.forEach(item => {
+            if (item.type === "Income") {
+                income += item.amount
+                return income
+
+            } else {
+                expense += item.amount
+                return expense
+            }
+        })
+
+
+        setTotal(income - expense)
+    }, [auth.transactions])
+
+
     return <div className='container p-5'>
-        <h1 className='bg-light text-center' >Total: 1000</h1>
+        <h1 className='bg-light text-center' >Current balance: {total}</h1>
         <div >
             <table className='table table-striped'>
                 <thead className='table-dark'>
@@ -16,8 +43,8 @@ const Home = () => {
                     </tr>
 
                 </thead>
-                <tbody  className='table-dark table-striped'>
-                    {auth.transactions.map(item => {
+                <tbody className='table-dark table-striped'>
+                    {lastTransactions.map(item => {
                         return <tr key={item.id}>
                             <td>{item.type} </td>
                             <td>{item.concept} </td>
