@@ -32,7 +32,7 @@ const Home = () => {
 
     return <div className='container p-5 box mt-5'>
         <h1 className='bg-light text-center border border-dark rounded' >Current balance: {total}</h1>
-        <div >
+        <div className="table-responsive" >
             <table className='table table-striped'>
                 <thead className='table-dark'>
                     <tr>
