@@ -1,4 +1,11 @@
-.fa-backward{
+.fa-angle-left{
     font-size: 40px;
     color: black;
+}
+
+.box{
+border-radius: 72px;
+background: #e0e0e0;
+box-shadow:  23px 23px 46px #969696,
+             -23px -23px 46px #ffffff;
 }

@@ -12,14 +12,14 @@ const OperationList = () => {
   };
 
 
-  return <div className='container col-md-6'>
-    <div>
+  return <div className='m-auto col-md-8'>
+    <div className='my-2'>
       <select onChange={(e) => setType(e.target.value)} className='form-select'>
         <option value="Income">Income</option>
         <option value="Expense">Expense</option>
       </select>
     </div>
-    <div className='table-responsive-md'>
+    <div className='table-responsive'>
       <table className='table table-striped'>
         <thead className='table-dark'>
           <tr>

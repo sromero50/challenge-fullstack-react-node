@@ -23,7 +23,7 @@ export const Form = () => {
     };
 
 
-    return <div className='container col-md-6'>
+    return <div className='container col-md-6 p-3 border border-dark rounded bg-light'>
         <form onSubmit={handleSubmit} >
             <div>
                 <input onChange={handleChange} className='form-control' name="concept" type="text" value={form.concept} placeholder="Description" required />

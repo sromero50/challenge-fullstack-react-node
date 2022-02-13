@@ -30,8 +30,8 @@ const Home = () => {
     }, [auth.transactions])
 
 
-    return <div className='container p-5'>
-        <h1 className='bg-light text-center' >Current balance: {total}</h1>
+    return <div className='container p-5 box mt-5'>
+        <h1 className='bg-light text-center border border-dark rounded' >Current balance: {total}</h1>
         <div >
             <table className='table table-striped'>
                 <thead className='table-dark'>
@@ -57,7 +57,7 @@ const Home = () => {
             </table>
         </div>
         <a href="/operations" >
-            <button className='btn btn-danger col-md-12' >Operaciones</button>
+            <button className='btn btn-danger col-md-12' >Operations</button>
         </a>
     </div>;
 };
